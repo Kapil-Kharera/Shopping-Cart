@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillStar, AiOutlineStar} from "react-icons/ai";
 
 const Rating = ({rating, onClick, style}) => {
-    console.log(AiOutlineStar);
+    // console.log(AiOutlineStar);
   return (
     <div>
         {
