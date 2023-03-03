@@ -6,7 +6,7 @@ import Filters from './Filters';
 
 const Home = () => {
   const {state: {products}} = CartState();
-
+  // console.log(products);
   return (
     <div className="home">
       <Filters />

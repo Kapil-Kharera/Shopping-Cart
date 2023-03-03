@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { Form, Container, FormControl, Navbar, NavbarBrand, Nav, Dropdown, Badge } from "react-bootstrap"
 import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
-import { FaShoppingCart } from "react-icons/fa"
+import { FaShoppingCart } from "react-icons/fa";
+import { CartState } from '../context/Context';
 
 const Header = () => {
+    const {state: {cart}} = CartState();
     return (
         <Navbar bg='dark' variant='black' style={{ height: 80 }}>
             <Container>
@@ -28,7 +30,7 @@ const Header = () => {
                         <DropdownToggle variant="success">
                             <FaShoppingCart fontSize="25px" />
                             {/* <Badge color="white">{10}</Badge> */}
-                            <span>10</span>
+                            <span style={{display:"inline-blocks", margin: "0px 6px"}}>{cart.length}</span>
                         </DropdownToggle>
                         <DropdownMenu style={{ minWidth: 370 }}>
                             <span style={{padding: 10}}>Cart is empty!</span>

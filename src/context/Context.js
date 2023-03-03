@@ -20,7 +20,7 @@ const Context = ({ children }) => {
     }));
 
     const [state, dispatch] = useReducer(cartReducer, {
-        products,
+        products: products,
         cart: [],
     });
 
@@ -32,7 +32,8 @@ const Context = ({ children }) => {
   )
 }
 
-export default Context;
 export const CartState = () => {
     return useContext(CartContext);
 }
+
+export default Context;
