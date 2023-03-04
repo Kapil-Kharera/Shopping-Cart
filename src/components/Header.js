@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Form, Container, FormControl, Navbar, NavbarBrand, Nav, Dropdown, Badge, Button } from "react-bootstrap"
+import { Form, Container, FormControl, Navbar, NavbarBrand, Nav, Dropdown, Button } from "react-bootstrap"
 import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import { FaShoppingCart } from "react-icons/fa";

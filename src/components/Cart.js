@@ -14,7 +14,7 @@ const Cart = () => {
       accumulator + (Number(current.price) * current.qty), 0
     ));
   }, [cart]);
-  console.log(cart);
+  // console.log(cart);
   return (
     <div className="home">
       <div className="productContainer">
@@ -34,7 +34,15 @@ const Cart = () => {
                     <Rating rating={product.ratings} />
                   </Col>
                   <Col md={2}>
-                    <Form.Select defaultValue={product.qty} >
+                    <Form.Select 
+                    value={product.qty} 
+                    onChange={(e) => dispatch({
+                      type: "CHANGE_CART_QTY",
+                      payload: {
+                        id: product.id,
+                        qty: e.target.value
+                      }
+                    })} >
                       {
                         [...Array(product.inStock).keys()].map(x => (
                           <option key={x + 1}>{x + 1}</option>
