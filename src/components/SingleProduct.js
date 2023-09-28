@@ -6,8 +6,7 @@ import { CartState } from '../context/Context';
 
 const SingleProduct = ({ product }) => {
   const { state: { cart }, dispatch } = CartState();
-  // console.log(product);
-  // console.log(cart);
+
   return (
     <div className="products">
       <Card>

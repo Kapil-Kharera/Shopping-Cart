@@ -25,20 +25,23 @@ const Home = () => {
 
     if (byFastDelivery) {
       sortedProducts = sortedProducts.filter(product => product.fastDelivery)
+      // console.log(sortedProducts);
     }
 
     if (byRating) {
-      sortedProducts = sortedProducts.filter(product => product.rating >= byRating);
+      sortedProducts = sortedProducts.filter(product => product.ratings >= byRating);
+      // console.log(sortedProducts);
     }
 
     if (searchQuery) {
       sortedProducts = sortedProducts.filter(product => product.name.toLowerCase().includes(searchQuery))
+      console.log(sortedProducts);
     }
 
     return sortedProducts || products;
   }
   // const displayedProducts = products ? transformProducts() : [];
-  console.log(transformProducts());
+  // console.log(transformProducts());
   return (
     <div className="home">
       <Filters />
